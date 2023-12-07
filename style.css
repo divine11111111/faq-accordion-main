@@ -13,10 +13,18 @@ body {
 }
 
 .container {
+   max-width: 100%;
+   width: 600px;
    border-radius: 2rem;
    padding: 2rem;
    box-shadow: -1px 0px 44px 4px rgba(168,156,168,1);
    background-color: hsl(0, 0%, 100%);
+}
+
+@media screen and (max-width: 768px) {
+   .container {
+      width: 300px;
+   }
 }
 
 .con-head {
@@ -56,11 +64,11 @@ body {
    display: none;
 }
 
-#plus {
+.plus {
    display: block;
 }
 
-#minus {
+.minus {
    display: none;
 }
 

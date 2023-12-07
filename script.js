@@ -6,17 +6,24 @@ questions.forEach((question) => {
 let answer = question.nextElementSibling;
 answer.classList.toggle("close");
 
-let plus = document.querySelector("#plus");
-let minus = document.querySelector("#minus");
-
 //change icon
+     let plusIcon = question.querySelectorAll(".plus");
+     let minusIcon = question.querySelectorAll(".minus");
 
-      if (answer.classList.contains("close")) {
-         plus.style.display = "block"; // Show plus icon
-         minus.style.display = "none"; // Hide minus icon
-      } else {
-         plus.style.display = "none"; // Hide plus icon
-         minus.style.display = "block"; // Show minus icon
-      }
+     plusIcon.forEach((icon) => {
+        if (answer.classList.contains("close")) {
+           icon.style.display = "block"; // Show plus icon
+        } else {
+           icon.style.display = "none"; // Hide plus icon
+        }
+     });
+
+     minusIcon.forEach((icon) => {
+        if (answer.classList.contains("close")) {
+           icon.style.display = "none"; // Hide minus icon
+        } else {
+           icon.style.display = "block"; // Show minus icon
+        }
+     });
    })
 })
